@@ -1,14 +1,13 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import LoginComponent from './pages/login'
+import { Router } from 'react-router'
 
 const App = () => {
 
   return (
       <>
-        <Routes>
-          <Route path="/login" element={<LoginComponent />} />
-        </Routes>
+        <Router history={history}>
+
+        </Router>
       </>
   )
 }
