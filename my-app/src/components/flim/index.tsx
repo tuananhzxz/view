@@ -2,7 +2,7 @@ import { QuanLyPhim } from "../../redux/actions/type/QuanLyPhimType";
 
 const FilmComponent = (props: { danhSachPhim: QuanLyPhim }) => {
   return (
-    <div className="h-full">
+    <div className="h-full mx-auto">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
         <div className="relative">
           <img

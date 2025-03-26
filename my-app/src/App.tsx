@@ -6,6 +6,9 @@ import Contact from "./pages/contact";
 import News from "./pages/new";
 import LoginComponent from "./pages/login";
 import RegisterComponent from "./pages/register";
+import UserTemplate from "./template/UserTemplate/UserTemplate";
+import CheckoutTemplate from "./template/CheckoutTemplate/CheckoutTemplate";
+import Checkout from "./pages/checkout";
 
 const App = () => {
   return (
@@ -17,8 +20,16 @@ const App = () => {
           element={<HomeTemplate children={<Contact />} />}
         />
         <Route path="/news" element={<HomeTemplate children={<News />} />} />
-        <Route path="/login" element={<LoginComponent />} />
         <Route path="/register" element={<RegisterComponent />} />
+
+        <Route
+          path="/login"
+          element={<UserTemplate children={<LoginComponent />} />}
+        />
+        <Route
+          path="/checkout"
+          element={<CheckoutTemplate children={<Checkout />} />}
+        />
       </Routes>
     </>
   );

@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../redux/configStore";
 import { getCarousel } from "../../../redux/actions/CarouselAction";
 import { Carousel as CarouselType } from "../../../redux/actions/type/CaraouselType";
+import { ClipLoader } from "react-spinners";
 
 const contentStyle: React.CSSProperties = {
   height: "600px",
@@ -26,7 +27,11 @@ const HomeCarousel: React.FC = () => {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <ClipLoader color="#36D7B7" size={50} />
+      </div>
+    );
   }
 
   if (error) {

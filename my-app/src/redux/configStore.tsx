@@ -5,10 +5,14 @@ import { thunk } from "redux-thunk";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import carouselReducer from "./reducers/Carousel";
 import quanLyPhimReducer from "./reducers/QuanLyPhimReducer";
+import quanLyRapReducer from "./reducers/QuanLyRapReducer";
+import userReducer from "./reducers/UserReducer";
 
 const rootReducer = combineReducers({
   carousel: carouselReducer,
   quanLyPhim: quanLyPhimReducer,
+  quanLyRap: quanLyRapReducer,
+  userReducer: userReducer,
 });
 
 export const store = configureStore({
